@@ -15,3 +15,22 @@ function RemoveDuplicates(arr){
   }
 
 console.log(RemoveDuplicates(arr))
+// 2. Count how many times each word appears in a sentence.
+let sentence = "This is a test sentence and this is a test";
+
+let words = sentence.toLowerCase().split(" ");
+
+console.log(words)
+
+
+let wordCount = {};
+for(let i = 0;i<words.length;i++){
+  let word = words[i];
+if(wordCount[word]){
+  wordCount[word]++;
+}
+else{
+  wordCount[word] = 1;
+}
+}
+console.log(wordCount)
